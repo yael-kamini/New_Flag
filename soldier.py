@@ -1,27 +1,23 @@
+import pygame
+import main
+import Screen
 import consts
-# paint screen one time
-# pygame.display.flip()
-# status = True
-# while (status):
-#
-#   # iterate over the list of Event objects
-#   # that was returned by pygame.event.get() method.
-#     for i in pygame.event.get():
-#
-#         # if event object type is QUIT
-#         # then quitting the pygame
-#         # and program both.
-#         if i.type == pygame.QUIT:
-#             status = False
-#
-# # deactivates the pygame library
-# pygame.quit()
+import gamefeild
+import grass
+import mine
+pygame.init()
 
-pygame.draw.line(surface, (255,255,255), (x,rows_space), (x,w))
-pygame.draw.line(surface, (255,255,255), (rows_space,y), (w,y))
+def create_solider(soldier_img):
+    soldier = pygame.image.load(SOLDIER_IMG)
+    sized_soldier = pygame.transform.scale(soldier,(
+        consts.SOLDIER_WIDTH,consts.SOLDIER_HEIGHT))
+    soldier_box = pygame.Sureface(
+        (consts.SOLDIER_WIDTH,consts.SOLDIER_HEIGHT *2),)
+    soldier_box.fill(consts.GREEN)
+    soldier_box.blit(sized_soldier,(0,0))
 
-pygame.draw.rect(surface,(0,0,200),(0,0,w,rows_space)) #top
-pygame.draw.rect(surface,(0,0,200),(0,0,rows_space,w)) #left
-pygame.draw.rect(surface,(0,0,200),(0,w,w + rows_space,rows_space)) #bottom
-pygame.draw.rect(surface,(0,0,200),(w,0,rows_space,w + rows_space)) #right
+    return soldier_box
+
+
+
 

@@ -1,13 +1,15 @@
 import sys
 import pygame
-import game_field
+import time
+import gamefeild
 import soldier
 import consts
-import screen
-
+import Screen
+import mine
+from New_Flag.Screen import drawGrid
 
 state = {
-    "original_soldier": screen.soldier(consts.SOLDIER_IMG),
+    #"original_soldier": Screen.soldier(consts.SOLDIER_IMG),
     "is_soldier_moved": False,
     "is_window_open": True,
     "state": consts.RUNNING_STATE,
@@ -18,9 +20,11 @@ def main():
 
 def handle_user_events():
     for event in pygame.event.get():
+        drawGrid()
         if event.type == pygame.QUIT:
             state["is_window_open"] = False
             sys.exit()
+        #pygame.display.update()
 
         elif state["state"] != consts.RUNNING_STATE:
             continue
@@ -45,6 +49,7 @@ def handle_user_events():
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_RETURN:
                 screen.dark_screen() #shelly?
+                time.sleep(1)
 
 
 def move_player(grid, row, col):
@@ -55,5 +60,5 @@ def move_player(grid, row, col):
 
 
 
-# main():
+main()
 #     while ("is_window_open")
