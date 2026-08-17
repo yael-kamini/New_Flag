@@ -7,7 +7,7 @@ import grass
 import mine
 
 def create_night_solider(night_soldier_img):
-    night_soldier = pygame.image.load(SOLDIER_NIGHT_IMG)
+    night_soldier = pygame.image.load(consts.SOLDIER_NIGHT_IMG)
     sized_night_soldier = pygame.transform.scale(night_soldier,(
         consts.SOLDIER_NIGHT_WIDTH,consts.SOLDIER_NIGHT_HEIGHT))
     night_soldier_box = pygame.Sureface(
