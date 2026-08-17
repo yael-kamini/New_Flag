@@ -6,7 +6,7 @@ import gamefeild
 import grass
 
 def create_flag(flag_img):
-    flag = pygame.image.load(FLAG_IMG)
+    flag = pygame.image.load(consts.FLAG_IMG)
     sized_flag = pygame.transform.scale(flag,(
         consts.FLAG_WIDTH,consts.FLAG_HEIGHT))
     flag_box = pygame.Sureface(
