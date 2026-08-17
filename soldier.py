@@ -8,7 +8,7 @@ import mine
 pygame.init()
 
 def create_solider(soldier_img):
-    soldier = pygame.image.load(SOLDIER_IMG)
+    soldier = pygame.image.load(consts.SOLDIER_IMG)
     sized_soldier = pygame.transform.scale(soldier,(
         consts.SOLDIER_WIDTH,consts.SOLDIER_HEIGHT))
     soldier_box = pygame.Sureface(
