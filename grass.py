@@ -8,7 +8,7 @@ import gamefeild
 import mine
 
 def create_grass(grass_img):
-    grass = pygame.image.load(GRASS_IMG)
+    grass = pygame.image.load(consts.GRASS_IMG)
     sized_grass = pygame.transform.scale(grass,(
         consts.GRASS_WIDTH,consts.GRASS_HEIGHT))
     grass_box = pygame.Sureface(
